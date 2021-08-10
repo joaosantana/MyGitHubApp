@@ -1,8 +1,8 @@
 name: Release builder
 
 on:
-  push:
-    tags: 'v*'
+  push
+#    tags: 'v*'
 
 jobs:
   release:
@@ -42,7 +42,7 @@ jobs:
         fetch-depth: 0
 
     - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.0.0
+      uses: microsoft/setup-msbuild@v1
 
     - name: Update manifest version
       run: |
